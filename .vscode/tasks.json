@@ -6,7 +6,7 @@
         {
             "type": "npm",
             "script": "dev",
-            "path": "client/",
+            "path": "/",
             "problemMatcher": []
         }
     ]
