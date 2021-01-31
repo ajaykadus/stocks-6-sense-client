@@ -8,5 +8,5 @@ const Heading = styled.h1<{ active?: boolean }>`
 `;
 
 export default function IApp(props: IAppProps) {
-  return <Heading>Stocks Trading with 6th Sense</Heading>;
+  return <Heading active={true}>Stocks Trading with 6th Sense</Heading>;
 }
