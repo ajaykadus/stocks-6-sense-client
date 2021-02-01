@@ -1,8 +1,8 @@
 import * as webpack from "webpack";
-import * as HtmlWebPackPlugin from "html-webpack-plugin";
-import createStyledComponentsTransformer from 'typescript-plugin-styled-components'
+import HtmlWebPackPlugin from "html-webpack-plugin";
+import createStyledComponentsTransformer from "typescript-plugin-styled-components";
 
-const styledComponentsTransformer = createStyledComponentsTransformer()
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html",
