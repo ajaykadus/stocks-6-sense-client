@@ -10,7 +10,7 @@
     "build": "webpack --mode production --config webpack.prod.ts",
     "check-types": "tsc",
     "test": "jest",
-    "test:coverage": "node scripts/test.js --env=jsdom --coverage --runInBand --watchAll=false"
+    "test:coverage": "yarn test --env=jsdom --coverage --runInBand --watchAll=false"
   },
   "dependencies": {
     "react": "^17.0.1",

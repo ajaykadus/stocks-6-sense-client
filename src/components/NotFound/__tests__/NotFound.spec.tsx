@@ -1,6 +1,6 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
-import NotFound from "./NotFound";
+import NotFound from "../NotFound";
 
 describe("<NotFound />", () => {
   it("shows not found message", () => {
