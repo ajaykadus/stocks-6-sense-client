@@ -88,7 +88,7 @@ export default () => {
               href="http://test.com"
               className={classes.link}
             >
-              Features
+              Account
             </Link>
             <Link
               variant="button"
@@ -96,15 +96,7 @@ export default () => {
               href="http://test.com"
               className={classes.link}
             >
-              Enterprise
-            </Link>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="http://test.com"
-              className={classes.link}
-            >
-              Support
+              Stocks
             </Link>
           </nav>
           <Button
