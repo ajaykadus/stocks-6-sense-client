@@ -66,58 +66,49 @@ export default () => {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="sm" component="main" className={classes.heroContent}>
-        <Typography
-          component="h1"
-          variant="h2"
-          align="center"
-          color="textPrimary"
-          gutterBottom
-        >
-          Users List
-        </Typography>
-      </Container>
-      <Container maxWidth="md" component="main">
-        <Grid container spacing={5} alignItems="flex-end">
-          {users.map((user) => (
-            <Grid item key={user.firstName} xs={12} sm={2} md={4}>
-              <Card>
-                <CardHeader
-                  title={user.firstName}
-                  subheader={user.firstName}
-                  titleTypographyProps={{ align: "center" }}
-                  subheaderTypographyProps={{ align: "center" }}
-                  action={null}
-                  className={classes.cardHeader}
-                />
-                <CardContent>
-                  <div className={classes.cardPricing}>
-                    <Typography component="h2" variant="h3" color="textPrimary">
-                      $&nbsp;
-                      {user.lastName}
-                    </Typography>
-                  </div>
-                  <ul>
-                    <Typography
-                      component="li"
-                      variant="subtitle1"
-                      align="center"
-                      key="Suggestion"
-                    >
-                      Details
-                    </Typography>
-                  </ul>
-                </CardContent>
-                <CardActions>
-                  <Button fullWidth color="primary">
-                    Follow
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+      <AppBar
+        position="static"
+        color="default"
+        elevation={0}
+        className={classes.appBar}
+      >
+        <Toolbar className={classes.toolbar}>
+          <Typography
+            variant="h6"
+            color="inherit"
+            noWrap
+            className={classes.toolbarTitle}
+          >
+            Stocks 6th Sense
+          </Typography>
+          <nav>
+            <Link
+              variant="button"
+              color="textPrimary"
+              href="http://test.com"
+              className={classes.link}
+            >
+              Account
+            </Link>
+            <Link
+              variant="button"
+              color="textPrimary"
+              href="http://test.com"
+              className={classes.link}
+            >
+              Stocks
+            </Link>
+          </nav>
+          <Button
+            href="#"
+            color="primary"
+            variant="outlined"
+            className={classes.link}
+          >
+            Login
+          </Button>
+        </Toolbar>
+      </AppBar>
     </>
   );
 };
