@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardHeader from "@material-ui/core/CardHeader";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Grid from "@material-ui/core/Grid";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
+import { Link } from "react-router-dom";
 import UserService from "../../Services/User/UserService";
 
 const useStyles = makeStyles((theme) => ({
@@ -52,12 +46,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default () => {
-  const [users, setUsers] = useState([]);
+  const [, setUsers] = useState([]);
   const classes = useStyles();
 
   useEffect(() => {
     const getUsersFn = async () => {
-      const { loading, data } = await UserService.getUsers();
+      const { data } = await UserService.getUsers();
       setUsers(data.users);
     };
     getUsersFn();
@@ -82,21 +76,11 @@ export default () => {
             Stocks 6th Sense
           </Typography>
           <nav>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="http://test.com"
-              className={classes.link}
-            >
-              Account
-            </Link>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="http://test.com"
-              className={classes.link}
-            >
+            <Link to="/stocks" className={classes.link}>
               Stocks
+            </Link>
+            <Link to="/users" className={classes.link}>
+              Users
             </Link>
           </nav>
           <Button
