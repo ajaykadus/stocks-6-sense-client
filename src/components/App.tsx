@@ -1,10 +1,11 @@
 import * as React from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
+import { ReactElement } from "react";
 import Stocks from "./Stock/Stock";
 import Users from "./User/User";
 import AppHeader from "./AppHeader/AppHeader";
 
-export default () => {
+export default (): ReactElement => {
   return (
     <>
       <HashRouter>
